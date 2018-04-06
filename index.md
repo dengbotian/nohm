@@ -404,7 +404,7 @@ If you need to define custom validations as functions and want them to be export
 Example customValidation.js:
 
 {% highlight js %}
-exports.usernameIsAnton= function (value, options) {
+exports.usernameIsAnton = function (value, options) {
   if (options.revert) {
     callback(value !== 'Anton');
   } else {
@@ -458,7 +458,7 @@ cpmst prefix = 'bob';
 const step = 50;
 let counter = 200;
 Nohm.model('customIdModel', {
-  idGenerator: function (cb) {
+  idGenerator: function () {
     // ids of custom will be bob250, bob300, bob350 ... 
     counter += step;
     return Promise.resolve(prefix+counter);
